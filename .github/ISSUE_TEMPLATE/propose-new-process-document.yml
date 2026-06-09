@@ -1,0 +1,74 @@
+name: "Propose New Program Process Document"
+description: "Request a new program process document to capture a workflow, role, or decision process within this repository."
+title: "[New Process Doc]: "
+labels: ["documentation", "process improvement"]
+body:
+  - type: input
+    id: document_name
+    attributes:
+      label: "Document Title"
+      description: "Give the proposed process document a clear, descriptive title."
+      placeholder: "E.g., Program Governance and Decision Rights"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      description: "Briefly describe the purpose and scope of the proposed document."
+      placeholder: "E.g., Define roles, approvals, and escalation paths for program decisions."
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: "Why is this document needed?"
+      description: "Explain the problem, gap, or team need this process document will address."
+      placeholder: "E.g., There is no documented onboarding process for new project leads."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Scope and Audience"
+      description: "Describe who should use this document and what it should cover."
+      placeholder: "E.g., Project managers, stakeholders, and delivery teams for planning and execution workflows."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_outline
+    attributes:
+      label: "Suggested Outline"
+      description: "List the key sections, checklists, or process steps you expect this document to include."
+      placeholder: "E.g., 1) Purpose, 2) Roles and responsibilities, 3) Workflow, 4) Decision criteria, 5) Review cadence"
+
+  - type: dropdown
+    id: related_document
+    attributes:
+      label: "Related existing process document"
+      description: "Select an existing document that is most closely related, if any."
+      options:
+        - "None"
+        - octoacme-project-management-overview.md
+        - octoacme-project-initiation.md
+        - octoacme-project-planning.md
+        - octoacme-execution-and-tracking.md
+        - octoacme-risks-and-communication.md
+        - octoacme-release-and-deployment.md
+        - octoacme-retrospective-and-continuous-improvement.md
+        - octoacme-roles-and-personas.md
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Select the criteria that should be met before this document is created."
+      options:
+        - label: "Proposed document addresses a documented gap or team need"
+        - label: "Scope and audience are clearly defined"
+        - label: "Suggested content outline is provided"
+        - label: "Stakeholders are identified or can be engaged for review"
